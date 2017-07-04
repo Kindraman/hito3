@@ -20,20 +20,20 @@ class Pages extends CI_Controller {
 	 */
 	 function __construct(){
 		parent:: __construct();
-		$this->load->model('bd_m','m');
+		$this->load->model('Bd_m','m');
 		$this->load->helper('url');
 
 	}
-	public function view($page = "home", $numPage ="1")
+	public function view($page = "home", $numPage ="0")
 	{
 
 		$data['title'] = $page;
 		$data['num'] = $numPage;
 
-		//$data['tablaCanchas']= $this->m->getData("canchas");
-		//$data['tablaCliente']= $this->m->getData("cliente");
-		//$data['tablaGym']= $this->m->getData("gym");
-		//$data['tablaHorarios']= $this->m->getData("horarios");
+		$data['tablaCanchas']= $this->m->getData("canchas");
+		$data['tablaCliente']= $this->m->getData("cliente");
+		$data['tablaGym']= $this->m->getData("gym");
+		$data['tablaHorarios']= $this->m->getData("horarios");
 
 
 		switch($page){

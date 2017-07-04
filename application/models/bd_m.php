@@ -1,5 +1,6 @@
 <?php
-class bd_m extends CI_Model {
+defined('BASEPATH') OR exit('No direct script access allowed');
+class Bd_m extends CI_Model {
 
         public function __construct()
         {
